@@ -1,6 +1,6 @@
 --made by mayhav
 
-local MarketplaceService = game:GetService("MarketplaceService")
+local MarketplaceService = game:GetService("MarketplaceService") 
 local RunService = game:GetService("RunService")
 local Coregui = game:GetService("CoreGui")
 
@@ -11,7 +11,7 @@ local msSuccess, info = pcall(function()
   return MarketplaceService:GetProductInfo(game.PlaceId)
 end)
 
-if msSuccess and info and info.Creator then
+if msSuccess and info and info.Creator then --i dont think that this works for 2013 - 2014
   creatorname2 = info.Creator.Name
   pacename = info.Name
 else
@@ -46,23 +46,23 @@ GlowThing.BackgroundTransparency = 1
 GlowThing.Position = UDim2.new(0, 1162, 0, 660)
 GlowThing.Image = "rbxasset://textures/Roblox-loading-glow.png"
 
-PlaceTitle.Parent = MainFrame
-PlaceTitle.Size = UDim2.new(0, 300, 0, 80)
-PlaceTitle.Position = UDim2.new(0, 35, 0, 640)
-PlaceTitle.Text = pacename
-PlaceTitle.BackgroundTransparency = 1
-PlaceTitle.TextColor3 = Color3.new(255, 255, 255)
-PlaceTitle.TextScaled = true
-PlaceTitle.Font = "SourceSans"
+--PlaceTitle.Parent = MainFrame
+--PlaceTitle.Size = UDim2.new(0, 300, 0, 80)
+--PlaceTitle.Position = UDim2.new(0, 35, 0, 640)
+--PlaceTitle.Text = pacename
+--PlaceTitle.BackgroundTransparency = 1
+--PlaceTitle.TextColor3 = Color3.new(255, 255, 255)
+--PlaceTitle.TextScaled = true
+--PlaceTitle.Font = "SourceSans"
 
-CreatorName.Parent = MainFrame
-CreatorName.Size = UDim2.new(0, 200, 0, 50)
-CreatorName.Position = UDim2.new(0, 50, 0, 720)
-CreatorName.Text = "By " .. creatorname2
-CreatorName.BackgroundTransparency = 1
-CreatorName.TextColor3 = Color3.new(255, 255, 255)
-CreatorName.TextScaled = true
-CreatorName.Font = "SourceSans"
+--CreatorName.Parent = MainFrame
+--CreatorName.Size = UDim2.new(0, 200, 0, 50)
+--CreatorName.Position = UDim2.new(0, 50, 0, 720)
+--CreatorName.Text = "By " .. creatorname2
+--CreatorName.BackgroundTransparency = 1
+--CreatorName.TextColor3 = Color3.new(255, 255, 255)
+--CreatorName.TextScaled = true
+--CreatorName.Font = "SourceSans"
 
 TextThing.Parent = MainFrame
 TextThing.Size = UDim2.new(0, 300, 0, 30)
@@ -101,7 +101,7 @@ end)
 
 function setMessage(message)
   TextThing.Text = message
-  game:SetMessage(message)
+  --game:SetMessage(message)
 end
 
 function clearLoadingScreen()
