@@ -93,7 +93,8 @@ RunService.RenderStepped:connect(function()
   if transparency >= 1 then
     transparency = 1
     direction = -1
-  elseif transparency <= 0 then
+  else
+  if transparency <= 0 then
     transparency = 0
     direction = 1
   end
