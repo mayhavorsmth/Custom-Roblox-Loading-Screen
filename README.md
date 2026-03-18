@@ -1,2 +1,40 @@
 # Custom-Roblox-Loading-Screen
-Custom Roblox Loading Screen Specifically made for 2014 Clients, Free to use
+A custom Roblox loading screen designed for 2014 clients, May also work for 2013 clients. Free to use.
+
+
+# How to use
+If you are Developing an Revival or something like that you most likely have an JoinScript
+
+Copy the content of LoadingScreen.lua and paste in your JoinScript 
+
+Your JoinScript should start like this:
+
+```lua
+-- This is a joinscript that works in 2013 and earlier clients
+
+function onPlayerAdded(player)
+  -- override
+end
+
+pcall(function() game:SetPlaceID(1818, false) end)
+
+local startTime = tick()
+local connectResolved = false
+local loadResolved = false
+local joinResolved = false
+local playResolved = true
+local playStartTime = 0
+
+local cdnSuccess = 0
+local cdnFailure = 0
+
+settings()["Game Options"].CollisionSoundEnabled = true
+pcall(function() settings().Rendering.EnableFRM = true end)
+pcall(function() settings().Physics.Is30FpsThrottleEnabled = false end)
+pcall(function() settings()["Task Scheduler"].PriorityMethod = Enum.PriorityMethod.AccumulatedError end)
+pcall(function() settings().Physics.PhysicsEnvironmentalThrottle = Enum.EnviromentalPhysicsThrottle.DefaultAuto end)
+
+local threadSleepTime = 15
+
+-- Paste LoadingScreen.lua here
+
