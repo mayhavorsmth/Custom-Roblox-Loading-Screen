@@ -1,11 +1,13 @@
-# Custom-Roblox-Loading-Screen
+# Custom Roblox Loading-Screen
 A custom Roblox loading screen designed for 2014 clients, May also work for 2013 clients. Free to use.
 
 
 # How to use
 If you are Developing an Revival or something like that you most likely have an JoinScript
 
-Copy the content of LoadingScreen.lua and paste in your JoinScript 
+# Step 1
+
+Copy everything from **LoadingScreen.lua** and paste it into your JoinScript.
 
 Your JoinScript should start like this:
 
@@ -36,5 +38,46 @@ pcall(function() settings().Physics.PhysicsEnvironmentalThrottle = Enum.Envirome
 
 local threadSleepTime = 15
 
--- Paste LoadingScreen.lua here
+-- Paste the content of LoadingScreen.lua here
+```
 
+# Step 2
+
+Now, find this part in your JoinScript:
+
+```lua
+  function requestCharacter(replicator)
+  
+  -- prepare code for when the Character appears
+  local connection
+  connection = player.Changed:connect(function (property)
+    if property=="Character" then
+      game:ClearMessage()
+      waitingForCharacter = false
+      
+      connection:disconnect()
+    
+      if 0 then
+        if not joinResolved then
+          local duration = tick() - startTime;
+          joinResolved = true
+          
+          playStartTime = tick()
+          playResolved = false
+        end
+      end
+    end
+  end)
+```
+
+Step 3
+
+Right after this line:
+
+if property=="Character" then
+
+Add this:
+
+clearLoadingScreen()
+
+Thats it, it should work now.
