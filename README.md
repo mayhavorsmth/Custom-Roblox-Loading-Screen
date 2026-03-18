@@ -81,3 +81,8 @@ Add this:
 clearLoadingScreen()
 
 Thats it, it should work now.
+
+Make sure that you have theses 2 png files in your textures folder:
+
+Roblox-loading@2x.png
+Roblox-loading-glow.png
