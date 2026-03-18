@@ -1,4 +1,5 @@
 --made by mayhav
+--aspect ratio is now fixed
 
 local MarketplaceService = game:GetService("MarketplaceService") 
 local RunService = game:GetService("RunService")
@@ -31,19 +32,20 @@ local PlaceTitle = Instance.new("TextLabel")
 LoadingScreen.Parent = Coregui
 
 MainFrame.Parent = LoadingScreen
-MainFrame.Size = UDim2.new(10000, 1000, 1000, 10000)
+MainFrame.Size = UDim2.new(1, 0, 1, 0)
+MainFrame.Position = UDim2.new(0, 0, 0, 0)
 MainFrame.BackgroundColor3 = Color3.new(0, 0, 0)
 
 RobloxLogo.Parent = MainFrame
 RobloxLogo.Size = UDim2.new(0, 100, 0, 100)
+RobloxLogo.Position = UDim2.new(1, -120, 1, -120)
 RobloxLogo.BackgroundTransparency = 1
-RobloxLogo.Position = UDim2.new(0, 1180, 0, 680)
 RobloxLogo.Image = "rbxasset://textures/Roblox-loading@2x.png"
 
 GlowThing.Parent = MainFrame
 GlowThing.Size = UDim2.new(0, 135, 0, 135)
+GlowThing.Position = UDim2.new(1, -137, 1, -137)
 GlowThing.BackgroundTransparency = 1
-GlowThing.Position = UDim2.new(0, 1162, 0, 660)
 GlowThing.Image = "rbxasset://textures/Roblox-loading-glow.png"
 
 --PlaceTitle.Parent = MainFrame
@@ -66,7 +68,7 @@ GlowThing.Image = "rbxasset://textures/Roblox-loading-glow.png"
 
 TextThing.Parent = MainFrame
 TextThing.Size = UDim2.new(0, 300, 0, 30)
-TextThing.Position = UDim2.new(0, 500, 0, 720)
+TextThing.Position = UDim2.new(0.5, -150, 0.75, 0)
 TextThing.Text = "Requesting Server..."
 TextThing.BackgroundTransparency = 1
 TextThing.TextColor3 = Color3.new(255, 255, 255)
