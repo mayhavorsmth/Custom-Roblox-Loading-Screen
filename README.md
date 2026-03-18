@@ -6,8 +6,6 @@ A custom Roblox loading screen made for 2014 clients, May also work for 2013 cli
 # How to use
 If you are Developing an Revival or something like that you most likely have an JoinScript
 
-# Step 1
-
 Copy everything from **LoadingScreen.lua** and paste it into your JoinScript.
 
 Your JoinScript should start like this:
@@ -42,8 +40,6 @@ local threadSleepTime = 15
 -- Paste the content of LoadingScreen.lua here
 ```
 
-# Step 2
-
 Now, find this part in your JoinScript:
 
 ```lua
@@ -70,8 +66,6 @@ Now, find this part in your JoinScript:
     end
   end)
 ```
-
-Step 3
 
 Right after this line:
 
